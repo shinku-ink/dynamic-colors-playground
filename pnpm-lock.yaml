@@ -1,9 +1,12 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@honkhonk/vite-plugin-svgr': ^1.1.0
+  '@iconify/react': ^3.1.0
   '@mui/material': ^5.2.4
   '@types/react': ^17.0.33
   '@types/react-dom': ^17.0.10
+  '@types/ua-parser-js': ^0.7.36
   '@vitejs/plugin-react': ^1.0.7
   autoprefixer: ^10.4.0
   clsx: ^1.1.1
@@ -17,6 +20,7 @@ specifiers:
   react-router-dom: ^6.1.1
   tailwindcss: ^3.0.6
   typescript: ^4.4.4
+  ua-parser-js: ^1.0.2
   vite: ^2.7.2
   vite-tsconfig-paths: ^3.3.17
 
@@ -30,11 +34,15 @@ dependencies:
   react-dom: registry.npmmirror.com/react-dom/17.0.2_react@17.0.2
   react-router: registry.npmmirror.com/react-router/6.1.1_react@17.0.2
   react-router-dom: registry.npmmirror.com/react-router-dom/6.1.1_react-dom@17.0.2+react@17.0.2
+  ua-parser-js: registry.npmmirror.com/ua-parser-js/1.0.2
   vite-tsconfig-paths: registry.npmmirror.com/vite-tsconfig-paths/3.3.17_vite@2.7.2
 
 devDependencies:
+  '@honkhonk/vite-plugin-svgr': registry.npmmirror.com/@honkhonk/vite-plugin-svgr/1.1.0_vite@2.7.2
+  '@iconify/react': registry.npmmirror.com/@iconify/react/3.1.0
   '@types/react': registry.npmmirror.com/@types/react/17.0.37
   '@types/react-dom': registry.npmmirror.com/@types/react-dom/17.0.11
+  '@types/ua-parser-js': registry.npmmirror.com/@types/ua-parser-js/0.7.36
   '@vitejs/plugin-react': registry.npmmirror.com/@vitejs/plugin-react/1.1.3
   autoprefixer: registry.npmmirror.com/autoprefixer/10.4.0_postcss@8.4.5
   postcss: registry.npmmirror.com/postcss/8.4.5
@@ -690,6 +698,12 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  registry.nlark.com/svg-parser/2.0.4:
+    resolution: {integrity: sha1-/cLinhOVFzYUC3bLEiyO5mMOtrU=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/svg-parser/download/svg-parser-2.0.4.tgz}
+    name: svg-parser
+    version: 2.0.4
+    dev: true
+
   registry.nlark.com/tmp/0.2.1:
     resolution: {integrity: sha1-hFf8MDfc9HGcJRNnoa9lAO4czxQ=, registry: http://registry.npm.taobao.org/, tarball: https://registry.nlark.com/tmp/download/tmp-0.2.1.tgz}
     name: tmp
@@ -1117,6 +1131,28 @@ packages:
     version: 0.2.5
     dev: false
 
+  registry.npmmirror.com/@honkhonk/vite-plugin-svgr/1.1.0_vite@2.7.2:
+    resolution: {integrity: sha1-ivLJH1LhJ5j3lQhfPPrVvEzaD0M=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@honkhonk/vite-plugin-svgr/download/@honkhonk/vite-plugin-svgr-1.1.0.tgz}
+    id: registry.npmmirror.com/@honkhonk/vite-plugin-svgr/1.1.0
+    name: '@honkhonk/vite-plugin-svgr'
+    version: 1.1.0
+    peerDependencies:
+      vite: ^2.5.0
+    dependencies:
+      '@svgr/core': registry.npmmirror.com/@svgr/core/5.5.0
+      vite: registry.npmmirror.com/vite/2.7.2
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@iconify/react/3.1.0:
+    resolution: {integrity: sha512-RBmYRPgjBukT7/qdUBnj0ZFEEP4plKs8f/ANYrPvnMID+T0VXRc1zKzKWWV9tjR5hw/QpsKSw1fmxfKjSihKHg==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@iconify/react/download/@iconify/react-3.1.0.tgz}
+    name: '@iconify/react'
+    version: 3.1.0
+    dependencies:
+      cross-fetch: registry.npmmirror.com/cross-fetch/3.1.4
+    dev: true
+
   registry.npmmirror.com/@mui/base/5.0.0-alpha.60_5539cae010396b202b015f3568914e95:
     resolution: {integrity: sha512-J4cQoeqNFMaY6fgEJsT7meaLdYilA4R8wA53us3BT5NBP4puMeJLPK4rVSmpTsB8hf4Iyq+fosKzkcYRiKTctA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@mui/base/download/@mui/base-5.0.0-alpha.60.tgz}
     id: registry.npmmirror.com/@mui/base/5.0.0-alpha.60
@@ -1300,6 +1336,114 @@ packages:
       picomatch: registry.nlark.com/picomatch/2.3.0
     dev: true
 
+  registry.npmmirror.com/@svgr/babel-plugin-add-jsx-attribute/5.4.0:
+    resolution: {integrity: sha1-ge9hlHuyaOudUFI0RvnGOPs1WQY=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-add-jsx-attribute/download/@svgr/babel-plugin-add-jsx-attribute-5.4.0.tgz}
+    name: '@svgr/babel-plugin-add-jsx-attribute'
+    version: 5.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-attribute/5.4.0:
+    resolution: {integrity: sha1-ayx3DJXIdGVP1eHV70dbeKCpYu8=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-attribute/download/@svgr/babel-plugin-remove-jsx-attribute-5.4.0.tgz}
+    name: '@svgr/babel-plugin-remove-jsx-attribute'
+    version: 5.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-empty-expression/5.0.1:
+    resolution: {integrity: sha1-JWIaiRXtetcNps6j0KbbwuqTPv0=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-empty-expression/download/@svgr/babel-plugin-remove-jsx-empty-expression-5.0.1.tgz}
+    name: '@svgr/babel-plugin-remove-jsx-empty-expression'
+    version: 5.0.1
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-replace-jsx-attribute-value/5.0.1:
+    resolution: {integrity: sha1-CyIfxX+fzRDpH+IZ4s0N0DFFqJc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-replace-jsx-attribute-value/download/@svgr/babel-plugin-replace-jsx-attribute-value-5.0.1.tgz}
+    name: '@svgr/babel-plugin-replace-jsx-attribute-value'
+    version: 5.0.1
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-svg-dynamic-title/5.4.0:
+    resolution: {integrity: sha1-E5tUbdDDGGtuXbT+/CbLC66nKdc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-svg-dynamic-title/download/@svgr/babel-plugin-svg-dynamic-title-5.4.0.tgz}
+    name: '@svgr/babel-plugin-svg-dynamic-title'
+    version: 5.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-svg-em-dimensions/5.4.0:
+    resolution: {integrity: sha1-ZUP2lSZjKhM85cq6uWXe6uoiNKA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-svg-em-dimensions/download/@svgr/babel-plugin-svg-em-dimensions-5.4.0.tgz}
+    name: '@svgr/babel-plugin-svg-em-dimensions'
+    version: 5.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-transform-react-native-svg/5.4.0:
+    resolution: {integrity: sha1-AL+aenPxytOUjNqx+N+3dHUPjIA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-transform-react-native-svg/download/@svgr/babel-plugin-transform-react-native-svg-5.4.0.tgz}
+    name: '@svgr/babel-plugin-transform-react-native-svg'
+    version: 5.4.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-plugin-transform-svg-component/5.5.0:
+    resolution: {integrity: sha1-WDpeKhk+IU2i86/rC56NMlASa0o=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-plugin-transform-svg-component/download/@svgr/babel-plugin-transform-svg-component-5.5.0.tgz}
+    name: '@svgr/babel-plugin-transform-svg-component'
+    version: 5.5.0
+    engines: {node: '>=10'}
+    dev: true
+
+  registry.npmmirror.com/@svgr/babel-preset/5.5.0:
+    resolution: {integrity: sha1-ivVPPgqK3XseKw/NWogsVTk98yc=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/babel-preset/download/@svgr/babel-preset-5.5.0.tgz}
+    name: '@svgr/babel-preset'
+    version: 5.5.0
+    engines: {node: '>=10'}
+    dependencies:
+      '@svgr/babel-plugin-add-jsx-attribute': registry.npmmirror.com/@svgr/babel-plugin-add-jsx-attribute/5.4.0
+      '@svgr/babel-plugin-remove-jsx-attribute': registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-attribute/5.4.0
+      '@svgr/babel-plugin-remove-jsx-empty-expression': registry.npmmirror.com/@svgr/babel-plugin-remove-jsx-empty-expression/5.0.1
+      '@svgr/babel-plugin-replace-jsx-attribute-value': registry.npmmirror.com/@svgr/babel-plugin-replace-jsx-attribute-value/5.0.1
+      '@svgr/babel-plugin-svg-dynamic-title': registry.npmmirror.com/@svgr/babel-plugin-svg-dynamic-title/5.4.0
+      '@svgr/babel-plugin-svg-em-dimensions': registry.npmmirror.com/@svgr/babel-plugin-svg-em-dimensions/5.4.0
+      '@svgr/babel-plugin-transform-react-native-svg': registry.npmmirror.com/@svgr/babel-plugin-transform-react-native-svg/5.4.0
+      '@svgr/babel-plugin-transform-svg-component': registry.npmmirror.com/@svgr/babel-plugin-transform-svg-component/5.5.0
+    dev: true
+
+  registry.npmmirror.com/@svgr/core/5.5.0:
+    resolution: {integrity: sha1-gugmuHFdcQgxIP6PJJLsfXh0pXk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/core/download/@svgr/core-5.5.0.tgz}
+    name: '@svgr/core'
+    version: 5.5.0
+    engines: {node: '>=10'}
+    dependencies:
+      '@svgr/plugin-jsx': registry.npmmirror.com/@svgr/plugin-jsx/5.5.0
+      camelcase: registry.npmmirror.com/camelcase/6.2.1
+      cosmiconfig: registry.nlark.com/cosmiconfig/7.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
+  registry.npmmirror.com/@svgr/hast-util-to-babel-ast/5.5.0:
+    resolution: {integrity: sha1-XuUqnCUz9z5j+PIrd5+TzUMqVGE=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/hast-util-to-babel-ast/download/@svgr/hast-util-to-babel-ast-5.5.0.tgz}
+    name: '@svgr/hast-util-to-babel-ast'
+    version: 5.5.0
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/types': registry.npmmirror.com/@babel/types/7.16.0
+    dev: true
+
+  registry.npmmirror.com/@svgr/plugin-jsx/5.5.0:
+    resolution: {integrity: sha1-GqjNeYodtxc6wENGbXtSI2s2kAA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@svgr/plugin-jsx/download/@svgr/plugin-jsx-5.5.0.tgz}
+    name: '@svgr/plugin-jsx'
+    version: 5.5.0
+    engines: {node: '>=10'}
+    dependencies:
+      '@babel/core': registry.npmmirror.com/@babel/core/7.16.5
+      '@svgr/babel-preset': registry.npmmirror.com/@svgr/babel-preset/5.5.0
+      '@svgr/hast-util-to-babel-ast': registry.npmmirror.com/@svgr/hast-util-to-babel-ast/5.5.0
+      svg-parser: registry.nlark.com/svg-parser/2.0.4
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   registry.npmmirror.com/@types/parse-json/4.0.0:
     resolution: {integrity: sha1-L4u0QUNNFjs1+4/9zNcTiSf/uMA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/parse-json/download/@types/parse-json-4.0.0.tgz}
     name: '@types/parse-json'
@@ -1348,6 +1492,12 @@ packages:
     resolution: {integrity: sha1-GmL4lSVyPd4kuhsBsJK/XfitTTk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/scheduler/download/@types/scheduler-0.16.2.tgz}
     name: '@types/scheduler'
     version: 0.16.2
+
+  registry.npmmirror.com/@types/ua-parser-js/0.7.36:
+    resolution: {integrity: sha1-m9C0fya1oxUb4hukzp9fpFfF8ZA=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@types/ua-parser-js/download/@types/ua-parser-js-0.7.36.tgz}
+    name: '@types/ua-parser-js'
+    version: 0.7.36
+    dev: true
 
   registry.npmmirror.com/@vitejs/plugin-react/1.1.3:
     resolution: {integrity: sha512-xv8QujX/uR4ti8qpt0hMriM2bdpxX4jm4iU6GAZfCwHjh/ewkX/8DJgnmQpE0HSJmgz8dixyUnRJKi2Pf1nNoQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/@vitejs/plugin-react/download/@vitejs/plugin-react-1.1.3.tgz}
@@ -1427,6 +1577,13 @@ packages:
       picocolors: registry.npmmirror.com/picocolors/1.0.0
     dev: true
 
+  registry.npmmirror.com/camelcase/6.2.1:
+    resolution: {integrity: sha512-tVI4q5jjFV5CavAU8DXfza/TJcZutVKo/5Foskmsqcm0MsL91moHvwiGNnqaa2o6PF/7yT5ikDRcVcl8Rj6LCA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/camelcase/download/camelcase-6.2.1.tgz?cache=0&sync_timestamp=1636945738185&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcamelcase%2Fdownload%2Fcamelcase-6.2.1.tgz}
+    name: camelcase
+    version: 6.2.1
+    engines: {node: '>=10'}
+    dev: true
+
   registry.npmmirror.com/caniuse-lite/1.0.30001286:
     resolution: {integrity: sha512-zaEMRH6xg8ESMi2eQ3R4eZ5qw/hJiVsO/HlLwniIwErij0JDr9P+8V4dtx1l+kLq6j3yy8l8W4fst1lBnat5wQ==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/caniuse-lite/download/caniuse-lite-1.0.30001286.tgz}
     name: caniuse-lite
@@ -1477,6 +1634,14 @@ packages:
     version: 1.1.1
     engines: {node: '>=6'}
     dev: false
+
+  registry.npmmirror.com/cross-fetch/3.1.4:
+    resolution: {integrity: sha1-lyPzo6JHv4uJA586OAqSROj6Lzk=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/cross-fetch/download/cross-fetch-3.1.4.tgz}
+    name: cross-fetch
+    version: 3.1.4
+    dependencies:
+      node-fetch: registry.npmmirror.com/node-fetch/2.6.1
+    dev: true
 
   registry.npmmirror.com/csstype/3.0.10:
     resolution: {integrity: sha512-2u44ZG2OcNUO9HDp/Jl8C07x6pU/eTR3ncV91SiK3dhG9TWvRVsCoJw14Ckx5DgWkzGA3waZWO3d7pgqpUI/XA==, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/csstype/download/csstype-3.0.10.tgz?cache=0&sync_timestamp=1637226171839&other_urls=https%3A%2F%2Fregistry.npmmirror.com%2Fcsstype%2Fdownload%2Fcsstype-3.0.10.tgz}
@@ -1961,6 +2126,13 @@ packages:
     hasBin: true
     dev: true
 
+  registry.npmmirror.com/node-fetch/2.6.1:
+    resolution: {integrity: sha1-BFvTI2Mfdu0uK1VXM5RBa2OaAFI=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/node-fetch/download/node-fetch-2.6.1.tgz}
+    name: node-fetch
+    version: 2.6.1
+    engines: {node: 4.x || >=6.0.0}
+    dev: true
+
   registry.npmmirror.com/node-releases/2.0.1:
     resolution: {integrity: sha1-PR05XyBPHy8ppUNYuftnh2WtL8U=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/node-releases/download/node-releases-2.0.1.tgz}
     name: node-releases
@@ -2301,6 +2473,12 @@ packages:
     engines: {node: '>=4.2.0'}
     hasBin: true
     dev: true
+
+  registry.npmmirror.com/ua-parser-js/1.0.2:
+    resolution: {integrity: sha1-4pdsNNv7MLFdLDALKlPqyHxXp3U=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/ua-parser-js/download/ua-parser-js-1.0.2.tgz}
+    name: ua-parser-js
+    version: 1.0.2
+    dev: false
 
   registry.npmmirror.com/vite-tsconfig-paths/3.3.17_vite@2.7.2:
     resolution: {integrity: sha1-sUIcSgHmtEa3jMHdEtRfMCvDons=, registry: http://registry.npm.taobao.org/, tarball: https://registry.npmmirror.com/vite-tsconfig-paths/download/vite-tsconfig-paths-3.3.17.tgz}
