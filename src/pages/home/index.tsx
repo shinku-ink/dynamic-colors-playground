@@ -18,13 +18,7 @@ export const Home = () => {
     theme === "dark"
 
   // Get the theme from a hex color
-  const _theme = themeFromSourceColor(argbFromHex(hex), [
-    {
-      name: "custom-1",
-      value: argbFromHex("#ff0000"),
-      blend: true,
-    },
-  ])
+  const _theme = themeFromSourceColor(argbFromHex(hex))
 
   useEffect(() => {
     // Apply the theme to the body by updating custom properties for material tokens
